@@ -2,12 +2,19 @@ package org.selenium.pom.dataProviders;
 
 import org.selenium.pom.objects.Product;
 import org.selenium.pom.utils.JacksonUtils;
+import org.testng.annotations.DataProvider;
 
 import java.io.IOException;
+import java.util.Arrays;
 
-public class DataProvider {
-    @org.testng.annotations.DataProvider(name = "getFeaturedProducts", parallel = true)
+public class MyDataProvider {
+    @DataProvider(name = "getFeaturedProducts", parallel = true)
     public Object[] getFeaturedProducts() throws IOException {
-        return JacksonUtils.deserializedJson("products.json", Product[].class);
+        Product[] allProducts = JacksonUtils.deserializedJson("products.json", Product[].class);
+
+        Product[] featuredProducts = Arrays.stream(allProducts)
+                .filter(product -> Boolean.TRUE.equals(product.getFeatured()))
+                .toArray(Product[]::new);
+        return featuredProducts;
     }
 }

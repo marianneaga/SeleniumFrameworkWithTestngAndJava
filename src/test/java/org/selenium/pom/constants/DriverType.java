@@ -1,2 +1,6 @@
-package org.selenium.pom.constants;public enum DriverType {
+package org.selenium.pom.constants;
+
+public enum DriverType {
+    CHROME,
+    FIREFOX
 }

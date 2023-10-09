@@ -1,5 +1,6 @@
 package org.selenium.pom.tests;
 
+import io.qameta.allure.Description;
 import org.selenium.pom.base.BaseTest;
 import org.selenium.pom.objects.BillingAddress;
 import org.selenium.pom.objects.Product;
@@ -11,13 +12,15 @@ import org.selenium.pom.pages.StorePage;
 import org.selenium.pom.utils.ConfigLoader;
 import org.selenium.pom.utils.JacksonUtils;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 
 
-public class MyFirstTestCase extends BaseTest {
+public class EndToEndTests extends BaseTest {
 
-    //@Test
+    @Description("End to end flow 'Guest checkout using direct bank transfer' using UI flow")
+    @Test
     public void guestCheckoutUsingDirectBankTransfer() throws IOException {
         String searchFor = "Blue";
         BillingAddress billingAddress = JacksonUtils.deserializedJson("myBillingAddress.json", BillingAddress.class);
@@ -43,7 +46,8 @@ public class MyFirstTestCase extends BaseTest {
         Assert.assertEquals(checkoutPage.getConfirmationNotice(), "Thank you. Your order has been received.");
     }
 
- //   @Test
+    @Description("End to end flow 'Login and checkout using direct bank transfer' using UI flow")
+    @Test
     public void loginAndCheckoutUsingDirectBankTransfer() throws IOException {
         String searchFor = "Blue";
         BillingAddress billingAddress = JacksonUtils.deserializedJson("myBillingAddress.json", BillingAddress.class);

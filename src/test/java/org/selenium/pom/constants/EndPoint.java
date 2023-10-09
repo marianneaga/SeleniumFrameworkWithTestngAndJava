@@ -1,2 +1,16 @@
-package org.selenium.pom.constants;public enum EndPoint {
+package org.selenium.pom.constants;
+
+public enum EndPoint {
+    STORE("/store"),
+    ACCOUNT("/account"),
+    ADD_TO_CART("/?wc-ajax=add_to_cart"),
+    CHECKOUT("/checkout"),
+    CART("/cart"),
+    HOME("/");
+
+    public final String url;
+
+    EndPoint(String url) {
+        this.url = url;
+    }
 }

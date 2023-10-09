@@ -1,6 +1,6 @@
 package org.selenium.pom.constants;
 
-public enum Environment {
+public enum EnvironmentType {
     STAGE,
     PRODUCTION
 }
