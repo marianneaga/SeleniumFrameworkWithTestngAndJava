@@ -11,7 +11,6 @@ import org.selenium.pom.base.BasePage;
 
 public class CartPage extends BasePage {
 
-//    Page Factory pattern object example
     @FindBy(css = "td[class='product-name'] a")
     private WebElement productName;
     @FindBy(css = ".checkout-button")

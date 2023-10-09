@@ -39,9 +39,9 @@ public class BaseTest {
     @BeforeMethod
     public synchronized void startDriver(@Optional String browser) {
         //Uncomment if you run the tests from testng.xml and comment if you run it from the IntelliJ runner
-//        browser = System.getProperty("browser", browser);
+        browser = System.getProperty("browser", browser);
         //Comment if you run the tests from testng.xml and uncomment if you run it from the IntelliJ runner
-        if (browser == null) browser = "CHROME";
+//        if (browser == null) browser = "CHROME";
         setDriver(DriverManagerFactory.getManager(DriverType.valueOf(browser)).createDriver());
         System.out.println("CURRENT THREAD: " + Thread.currentThread().getId() + ", " +
                 "DRIVER " + getDriver());

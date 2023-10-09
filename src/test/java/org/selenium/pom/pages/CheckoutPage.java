@@ -12,22 +12,6 @@ import org.selenium.pom.objects.BillingAddress;
 import org.selenium.pom.objects.User;
 
 public class CheckoutPage extends BasePage {
-   /* private final By showLoginButton = By.cssSelector(".showlogin");
-    private final By username = By.id("username");
-    private final By password = By.id("password");
-    private final By rememberMeCheckBox = By.id("rememberme");
-    private final By loginButton = By.name("login");
-    private final By firstName = By.id("billing_first_name");
-    private final By lastName = By.id("billing_last_name");
-    private final By addressLineOne = By.id("billing_address_1");
-    private final By city = By.id("billing_city");
-    private final By postalCode = By.id("billing_postcode");
-    private final By email = By.id("billing_email");
-    private final By placeOrderButton = By.cssSelector("#place_order");
-    private final By successNote = By.cssSelector(".woocommerce-notice");
-    private final By countryDropDown = By.id("billing_country");
-    private final By stateDropDown = By.id("billing_state");
-    private final By directBankTransferRadioButton = By.id("payment_method_bacs");*/
 
     @FindBy(className = "showlogin")
     private WebElement showLoginButton;
