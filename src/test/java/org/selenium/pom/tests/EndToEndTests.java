@@ -30,7 +30,7 @@ public class EndToEndTests extends BaseTest {
                 .getMyHeader()
                 .navigateToStoreUsingMenu()
                 .search(searchFor);
-        Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "“");
+        Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "”");
         storePage
                 .getProductThumbnail()
                 .clickAddToCardButton(product.getName());

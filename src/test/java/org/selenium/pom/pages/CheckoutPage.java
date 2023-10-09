@@ -155,6 +155,7 @@ public class CheckoutPage extends BasePage {
     }
 
     public CheckoutPage selectCashOnDelivery(){
+        waitForOverlaysToDisappear();
         getElementToBeClickable(cashOnDeliveryRadioButton).click();
         return this;
     }
